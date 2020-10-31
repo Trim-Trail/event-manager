@@ -1,5 +1,5 @@
-// Foundation for Sites
-// https://get.foundation
+// Foundation for Sites by ZURB
+// foundation.zurb.com
 // Licensed under MIT Open Source
 
 // sass-lint:disable no-color-literals, no-qualifying-elements
@@ -8,7 +8,7 @@
 /// @group global
 ////
 
-@import '~foundation-sites/scss/util/util';
+@import '~node_modules/foundation-sites/scss/util/util';
 
 /// Font size attribute applied to `<html>` and `<body>`. We use 100% by default so the value is inherited from the user's browser settings.
 /// @type Number
@@ -173,11 +173,11 @@ $global-color-pick-contrast-tolerance: 0 !default;
 
   img {
     // Get rid of gap under images by making them display: inline-block; by default
-    //display: inline-block;
-    //vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 
     // Grid defaults to get images and embeds to work properly
-    //max-width: 100%;
+    max-width: 100%;
     height: auto;
     -ms-interpolation-mode: bicubic;
   }

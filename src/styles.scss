@@ -1,1 +1,18 @@
-@import "assets/scss/foundation-sites/foundation";
+@import 'assets/scss/foundation-sites/foundation';
+@import 'assets/scss/variables';
+@import 'assets/scss/site';
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+*{
+  box-sizing: border-box;
+}
+
+@include site-all($site-colors
+,$site-unit
+,$site-responsive);

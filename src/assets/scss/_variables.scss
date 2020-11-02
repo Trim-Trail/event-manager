@@ -1,3 +1,11 @@
+//Angular material
+@import '~@angular/material/theming';
+$site-mat-primary: mat-palette($mat-indigo);
+$site-mat-accent: mat-palette($mat-pink, A200, A100, A400);
+$site-mat-warn: mat-palette($mat-red);
+$site-mat-theme: mat-light-theme($site-mat-primary, $site-mat-accent, $site-mat-warn);
+
+//Site specific
 $site-colors:(
     alpha0:rgba(0, 0, 0, 0),
     alpha25:rgba(0, 0, 0, 0.25),
@@ -15,7 +23,11 @@ $site-colors:(
     grey9:#212121,
     dark: rgba(black, 0.87),
     light:white,
+    primary:#ee0290,
+    secondary:#ee6002,
 );
 
 $site-unit:'rem';
 $site-responsive:true;
+$site-header-height: 57px;
+

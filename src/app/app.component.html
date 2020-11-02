@@ -1,26 +1,29 @@
-<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-  <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-  <div class="title-bar-title">Site Title</div>
-</div>
-
-<div class="top-bar" id="responsive-menu">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text">Logo</li>
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="menu">
-      <li>Menu</li>
-    </ul>
-  </div>
-</div>
-<div class="grid-container u-bg-grey4 u-fg-light sibin">
-<h1>Content Area</h1>
-<h2>Content Area</h2>
-<h3>Content Area</h3>
-<h4>Content Area</h4>
-<h5>Content Area</h5>
-<h6>Content Area</h6>
-<a href="#" class="u-lnk-grey3 u-hvr-light u-p-20 u-p-5@small">Test Link...</a>
+<app-header (toggleMenu)="onToggleMenu()"></app-header>
+<div class="main-content-wrapper" [appMediaQueryMatcher] (queryChange)="onMediaQueryChange($event)">
+  <mat-sidenav-container (backdropClick)="onToggleMenu()">
+      <mat-sidenav #sidenavMain class="sidenav-main" [opened]="mobileQuery.matches" [mode]="mobileQuery.matches ? 'side' : 'over'" position="left">
+          <div class="close">
+              <div *ngIf="!mobileQuery.matches">
+                  <a class="cursor-pointer" (click)="onToggleMenu()">
+                      <mat-icon>close</mat-icon>
+                  </a>
+              </div>
+          </div>
+          <app-left-nav></app-left-nav>
+      </mat-sidenav>
+      <mat-sidenav-content>
+          <div class="grid-container u-pt-1 u-pb-1">
+             Router Outlet
+              <div class="u-bg-grey4 u-fg-light">
+                <h1>Content Area</h1>
+                <h2>Content Area</h2>
+                <h3>Content Area</h3>
+                <h4>Content Area</h4>
+                <h5>Content Area</h5>
+                <h6>Content Area</h6>
+                <a href="#" class="u-lnk-grey3 u-hvr-light u-p-20 u-p-5@small">Test Link...</a>
+              </div>
+          </div>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

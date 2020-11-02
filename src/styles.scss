@@ -2,17 +2,22 @@
 @import 'assets/scss/variables';
 @import 'assets/scss/site';
 
-html, body { height: 100%; }
+html, body {
+   height: 100%;
+   width: 100%;
+}
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-size: 1rem;
-  line-height: 1.3rem;
 }
 *{
   box-sizing: border-box;
 }
 
+@include mat-core();
+@include angular-material-theme($site-mat-theme);
 @include site-all($site-colors
 ,$site-unit
 ,$site-responsive);
+
+

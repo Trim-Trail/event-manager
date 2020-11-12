@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-declare var $: any;
+
 
 @Component({
   selector: 'app-root',
@@ -18,14 +18,6 @@ export class AppComponent implements OnInit {
   onToggleMenu(): void{
     this.sidenavMain.toggle();
   }
-
-  // onClose(): void {
-  //   //this.isOpened = this.sidenavMain.opened;
-  // }
-
-  // onOpen(): void {
-  //   //this.isOpened = this.sidenavMain.opened;
-  // }
 
   onMediaQueryChange(query: MediaQueryList): void {
     this.mobileQuery = query;

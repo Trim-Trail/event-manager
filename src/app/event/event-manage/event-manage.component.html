@@ -1,3 +1,4 @@
+<mat-dialog-content>
 <div class="grid-container">
   <div class="grid-x grid-padding-x">
     <div class="cell">
@@ -8,12 +9,12 @@
       <div *ngIf="image" class="remove-image u-mb-1">
         <a class="u-cursor-pointer u-lnk-error u-hvr-grey5" (click)="onRemoveImage()"><span>
             <mat-icon>delete</mat-icon>
-          </span>Remove</a>
+          </span>Remove Image</a>
       </div>
       <mat-card (click)="onChangeImage()" class="event-image u-cursor-pointer">
         <img [src]="image" placeholder="assets/images/placeholder.png" />
         <div class="u-circle u-circle-0 position-absolute u-bg-alpha50 u-fg-light change-image">
-          <span>{{this.image?'Change':'Add'}}</span>
+          <span>{{this.image?'Change Image':'Add Image'}}</span>
         </div>
       </mat-card>
     </div>
@@ -50,3 +51,4 @@
     </div>
   </div>
 </div>
+</mat-dialog-content>
